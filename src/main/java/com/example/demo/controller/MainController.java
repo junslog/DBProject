@@ -9,21 +9,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.dao.UserDao;
-import com.example.demo.dto.User;
+import com.example.demo.dto.UserDto;
 
 @Controller
-public class HelloController {
-
-	@Autowired
-	private UserDao userDao;
+public class MainController {
 	
+	/*
+	 * Deprecated Code
+
 	@GetMapping("/sqlTest")
 	public String SQLtestPage() {
 		return "sqlTest";
 	}
 	
 	@PostMapping("sqlTest/user")
-	public String userAdd(User user) {
+	public String userAdd(UserDto user) {
 		System.out.print(user);
 		userDao.insert(user);
 		return "redirect:/sqlTest/user";
@@ -34,6 +34,10 @@ public class HelloController {
 		model.addAttribute("users", userDao.listForBeanPropertyRowMapper());
 		return "/userList";
 	}
+	*/
+	
+	@Autowired
+	private UserDao userDao;
 	
 	@RequestMapping("/")
 	public String index() {
@@ -46,8 +50,7 @@ public class HelloController {
 	}
 	
 	@RequestMapping("/welcome")
-	public String welcome(@RequestParam("id") String id, Model model) {
-		model.addAttribute("id", id);
+	public String welcome() {
 		return "welcome";
 	}
 }
