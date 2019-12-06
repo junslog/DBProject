@@ -11,9 +11,5 @@
 <% String password = request.getParameter("password"); %>
 
 <!-- DB Logic : Should be implemented.-->
-<%
-	
-	
-	
-%>
+<% %>
 </html>
