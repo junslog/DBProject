@@ -29,3 +29,9 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Binary Files ###
+/bin/
+
+## Target Files ###
+/target/
