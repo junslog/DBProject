@@ -12,9 +12,9 @@
         <% } %>
         <form action="authentication" method="post">
             <label>ID: </label>
-            <input name="id" type="text" placeholder="아이디를 입력해주세요."><br>
+            <input name="id" type="text"><br>
             <label>PW: </label>
-            <input name="password" type="password" placeholder="비밀번호를 입력해주세요."><br>
+            <input name="pw" type="password"><br>
             <input type="submit" value="로그인">
         </form>
     </body>
