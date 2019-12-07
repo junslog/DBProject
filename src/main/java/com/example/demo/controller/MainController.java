@@ -1,16 +1,26 @@
 package com.example.demo.controller;
 
+import java.sql.Date;
+import java.sql.Timestamp;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.example.demo.service.UserMyBatisRepository;
 import com.example.demo.service.UserService;
+import com.example.demo.dao.*;
+import com.example.demo.dto.*;
 
 @Controller
 public class MainController {
 	
+	//@Autowired
+	//private UserService userService;
 	@Autowired
-	private UserService userService;
+	private UserMyBatisRepository userRepository;
 	
 	@RequestMapping("/")
 	public String index() {
@@ -25,5 +35,29 @@ public class MainController {
 	@RequestMapping("/welcome")
 	public String welcome() {
 		return "welcome";
+	}
+	
+	@RequestMapping("/insert")
+	public String insert() {
+		java.util.Date date = new java.util.Date();
+		
+		Timestamp temp1 = new Timestamp(date.getTime());
+		Timestamp temp2 = new Timestamp(date.getTime());
+		UserDto tempUser = new UserDto("woeifj", "weoijt", "woeijt", "MALE", "Y", "Y", "MORNING","212040", temp1, temp2);
+		userRepository.insert(tempUser);
+		return "insert";
+	}
+	
+	@RequestMapping("/find")
+	@ResponseBody
+	public String find() {
+
+		List<UserDto> list = userRepository.findAll();
+		System.out.println(list.size());
+		for(int i = 0 ; i < list.size(); i++) {
+			System.out.println("id : " + list.get(i).getId());
+			System.out.println("pw : " + list.get(i).getPassword());
+		}
+		return null;
 	}
 }

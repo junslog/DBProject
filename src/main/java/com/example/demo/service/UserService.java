@@ -8,8 +8,7 @@ import com.example.demo.dao.UserDao;
 @Service
 public class UserService {
 
-	@Autowired
-	private UserDao userDao;
+	
 	
 	
 }
