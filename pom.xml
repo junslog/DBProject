@@ -58,7 +58,7 @@
 	<dependency>
     	<groupId>org.springframework.boot</groupId>
     	<artifactId>spring-boot-starter-test</artifactId>
-    	<!--  <scope>test</scope> -->
+    	<scope>test</scope>
     	<!-- 
     	[중요]
     	Heroku에 베포 시, scope 부분을 제거해줘야 한다.
@@ -75,7 +75,7 @@
     	<groupId>junit</groupId>
     	<artifactId>junit</artifactId>
     	<version>4.12</version>
-    	<!-- <scope>test</scope>  -->
+    	<scope>test</scope>
 	</dependency>
 
   </dependencies>
