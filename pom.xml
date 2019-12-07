@@ -59,14 +59,6 @@
     	<groupId>org.springframework.boot</groupId>
     	<artifactId>spring-boot-starter-test</artifactId>
     	<scope>test</scope>
-    	<!-- 
-    	[중요]
-    	Heroku에 베포 시, scope 부분을 제거해줘야 한다.
-    	==> scope를 test로 선언하게 되면, 해당 라리브러리는
-    	로컬에서 테스트 중에만 사용을 하고, 실제 packaging 중에는
-    	포함이 되지 않음! ==> heroku에 commit할 때, compile
-    	error 남. 아래의 Junit dependency또한 마찬가지
-    	-->
     </dependency>
     
     
