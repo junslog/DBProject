@@ -8,6 +8,7 @@ class AroomdaApplicationTests {
 
 	@Test
 	void contextLoads() {
+		
 	}
 
 }
