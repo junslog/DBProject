@@ -12,16 +12,19 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import com.example.demo.dto.UserDto;
+import com.example.demo.dao.*;
 
 
 
 
 @Repository
 public class UserDao {
+	
+
 
 	// jdbcTemplate 사용법을 익혀야 함.
 	
-	@Autowired
+	/*@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
 	public List<UserDto> listForBeanPropertyRowMapper() {
@@ -53,7 +56,7 @@ public class UserDao {
 				});
 		return userDto;
 	}
-	
+	*/
 	
 	
 }

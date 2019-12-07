@@ -4,6 +4,10 @@ public class UserDto {
 
 	private String id;
 	private String password;
+	public UserDto(String Id, String Password) {
+		this.id = Id;
+		this.password = Password;
+	}
 	public String getId() {
 		return id;
 	}
