@@ -31,7 +31,4 @@ build/
 .vscode/
 
 ### Binary Files ###
-/bin/
-
-## Target Files ###
-/target/
+bin/

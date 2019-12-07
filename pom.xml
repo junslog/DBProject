@@ -4,6 +4,9 @@
   <artifactId>spring-boot-web-application-example</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <properties>
+  	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
     <java.version>1.8</java.version>
   </properties>
   <parent>
@@ -50,6 +53,22 @@
 		<artifactId>mysql-connector-java</artifactId>
 		<version>8.0.18</version>
 	</dependency>
+	
+	<!-- Test -->
+	<dependency>
+    	<groupId>org.springframework.boot</groupId>
+    	<artifactId>spring-boot-starter-test</artifactId>
+    	<scope>test</scope>
+    </dependency>
+    
+    
+    <!-- Junit For Test -->
+    <dependency>
+    	<groupId>junit</groupId>
+    	<artifactId>junit</artifactId>
+    	<version>4.12</version>
+    	<!--  <scope>test</scope> -->
+	</dependency>
 
 	<dependency>
 		<groupId>org.mybatis.spring.boot</groupId>
@@ -63,8 +82,12 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+            <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
+            </configuration>
       </plugin>
     </plugins>
   </build>
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
 </project>
