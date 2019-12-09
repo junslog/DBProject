@@ -19,7 +19,7 @@ public interface UserMyBatisRepository {
 	
 	@Select("INSERT INTO users(id, password, name, gender, smoking, snoring, active_type, photo_url, registered_at, withdrew_at) "
 			+ "VALUES (#{id}, #{password}, #{name}, #{gender}, #{smoking}, #{snoring}, #{active_type}, #{photo_url}, #{registered_at}, #{withdrew_at})")
-	public int insert(UserDto userDto);
+	public Integer insert(UserDto userDto);
 
 	
 }
