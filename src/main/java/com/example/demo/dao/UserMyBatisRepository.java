@@ -21,7 +21,7 @@ public interface UserMyBatisRepository {
 			+ "VALUES (#{id}, #{password}, #{name}, #{gender}, #{smoking}, #{snoring}, #{active_type}, #{photo_url}, #{registered_at}, #{withdrew_at})")
 	public Integer createUser(UserDto userDto);
 
-	@Select("select * from users where 'id' = #{id}")
+	@Select("select * from users where id = #{id}")
 	public UserDto findUser(String id);
 	
 	@Select("SELECT * FROM users WHERE `id`=#{login_id} AND `password`=#{password}")
