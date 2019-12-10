@@ -28,6 +28,7 @@ public class UserDto {
 		this.registered_at = registered_at;
 		this.withdrew_at = withdrew_at;
 	}
+	public UserDto() {}
 	public String getId() {
 		return id;
 	}

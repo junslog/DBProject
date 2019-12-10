@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.service.UserMyBatisRepository;
 import com.example.demo.service.UserService;
-import com.example.demo.LoginForm;
+
+
 import com.example.demo.dao.*;
 import com.example.demo.dto.*;
 
@@ -48,7 +48,7 @@ public class MainController {
 		Timestamp temp1 = new Timestamp(date.getTime());
 		Timestamp temp2 = new Timestamp(date.getTime());
 		UserDto tempUser = new UserDto("id", "password", "name", "MALE", "Y", "Y", "MORNING","212040", temp1, temp2);
-		userRepository.insert(tempUser);
+		userRepository.createUser(tempUser);
 		return "insert";
 	}
 	
@@ -64,7 +64,7 @@ public class MainController {
 	}
 	
 	@PostMapping("/login")
-	public String login(@RequestBody LoginForm form) {
+	public String login(@RequestBody UserDto form) {
 		
 		
 		return "";
