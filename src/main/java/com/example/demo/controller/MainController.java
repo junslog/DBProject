@@ -21,7 +21,7 @@ public class MainController {
 	MainService service;
 	
 	@RequestMapping("")
-	public List<UserDto> getUsersForMainPage0() {
+	public List<UserDto> getUsersForMainPage() {
 		return service.getUsersForMainPage();
 	}
 	
