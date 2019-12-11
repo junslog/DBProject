@@ -26,6 +26,9 @@ public interface UserMyBatisRepository {
 	
 	@Select("SELECT * FROM users WHERE `id`=#{login_id} AND `password`=#{password}")
     //UserDto getAccountUser(@Param("login_id") String loginId, @Param("password") byte[] password);
-	UserDto getAccountUser(@Param("login_id") String loginId, @Param("password") String password);
+	public UserDto getAccountUser(@Param("login_id") String loginId, @Param("password") String password);
+	
+	
+	
 }
 
