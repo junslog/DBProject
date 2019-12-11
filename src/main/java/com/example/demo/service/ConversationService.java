@@ -27,5 +27,9 @@ public class ConversationService {
 		return conversationRepository.getChatsBetweenTwoUsers(sender_id, receiver_id);
 	}
 	
+	public void insertChatInDB(ChatDto chatDto) {
+		conversationRepository.insertChatInDB(chatDto);
+	}
+	
 	
 }
