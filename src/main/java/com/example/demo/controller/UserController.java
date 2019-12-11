@@ -39,6 +39,7 @@ public class UserController {
         return user;
     }
 
+
     @PostMapping("/accounts")
     public UserDto createUserWithAccount(@RequestBody UserDto form) {
         return service.createUserWithAccount(form);
