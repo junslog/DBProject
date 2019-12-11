@@ -32,3 +32,6 @@ build/
 
 ### Binary Files ###
 bin/
+
+### .metadata ###
+.metadata/
