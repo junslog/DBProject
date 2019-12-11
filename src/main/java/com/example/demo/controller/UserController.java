@@ -12,7 +12,6 @@ import com.example.demo.dto.UserDto;
 import com.example.demo.exception.LoginFailedException;
 import com.example.demo.exception.UserNotFoundException;
 import com.example.demo.form.AccountLoginForm;
-import com.example.demo.form.AccountRegisterForm;
 import com.example.demo.service.UserService;
 import com.example.demo.view.LoginView;
 
@@ -31,6 +30,7 @@ public class UserController {
         return user;
     }
 
+    
     @PostMapping("/users/accounts")
     public UserDto createUserWithAccount(@RequestBody UserDto form) {
         return service.createUserWithAccount(form);
